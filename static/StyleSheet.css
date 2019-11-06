@@ -133,13 +133,6 @@ h2 {
   position: fixed;
 }
 
-[name="filename"] {
-  resize: none;
-  border: 2px solid lightgrey;
-  border-radius: 4px;
-  font-family: Geneva, sans-serif;
-  font-size: 15px;
-}
 
 [name="syn"],[name="readonlytext"] {
   letter-spacing: 2px;

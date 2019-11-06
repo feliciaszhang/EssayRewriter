@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import nltk
-nltk.download('punkt')
+nltk.download('all')
 import os
 from nltk.tokenize import word_tokenize
 from nltk.corpus import wordnet

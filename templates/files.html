@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Files</title>
+<link href="{{ url_for('static', filename='StyleSheet.css')}}" rel="stylesheet" type="text/css">
+</head>
+
+
+
+<body>
+<div class="header">
+<h1>Essay Rewriter</h1>
+</div>
+
+<div class="single">
+
+<form action="/files" method="post">
+<table>
+  <tr>
+    <th>Filename</th>
+    <th>Timestamp</th>
+  </tr>
+  {% for x in files %}
+  <tr>
+    <td><input type="submit" name=filename value={{x.filename}} id="n"></td>
+    <td>{{ x.timestamp }}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+
+
+
+  <input type="submit" name=back value="Back" id="y">
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Save</title>
+<link href="{{ url_for('static', filename='StyleSheet.css')}}" rel="stylesheet" type="text/css">
+</head>
+
+
+
+<body>
+<div class="header">
+<h1>Essay Rewriter</h1>
+</div>
+
+
+<div class="column">
+<form action="{{ url_for('save', original='original', syn='syn') }}" method="post">
+<h2>Original Text</h2>
+  <textarea readonly name="readonlytext">{{ original }}</textarea><br>
+</div>
+
+
+
+<div class="column">
+<h2>Result</h2>
+<textarea readonly name="syn">{{ syn }}</textarea>
+</div>
+
+<div class="single">
+<h2>Save As</h2>
+  <input type="text" name=filename>
+  <input type="submit" name=save value="Save" id="y">
+</form>
+</div>
+
+</body>
+</html>

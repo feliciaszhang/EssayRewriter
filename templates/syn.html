@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Synonyms</title>
+<link href="{{ url_for('static', filename='StyleSheet.css')}}" rel="stylesheet" type="text/css">
+</head>
+
+
+
+<body>
+<div class="header">
+<h1>Essay Rewriter</h1>
+</div>
+
+<div class="column">
+<h2>Original</h2>
+<form action="/syn" method="post">
+  <textarea name="text">{{ text }}</textarea><br>
+  <div class="border"></div>
+</div>
+
+
+
+<div class="column">
+<h2>Revision</h2>
+<textarea readonly name="syn">
+{%- for syn in listofsyn|join(' ') -%}
+{{ syn }}
+{%- endfor -%}
+</textarea>
+  <button type="submit" name="back" class="leftbutton"></button>
+  <button type="submit" name="save" class="addbutton"></button>
+</form>
+</div>
+
+
+</body>
+</html>

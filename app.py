@@ -28,9 +28,12 @@ def hello():
                             synonyms.append(l.name())
                         syns = set(synonyms)
                         sortedsyns = sorted(syns, key=len)
-                        longestsyn = (sortedsyns[-1],)
-                        for longest in longestsyn:
-                            longest = str(longest)
+                        if len(sortedsyns) == 0:
+                            listofsyn.append(word[0])
+                        else:
+                            longestsyn = (sortedsyns[-1],)
+                            for longest in longestsyn:
+                                longest = str(longest)
                 listofsyn.append(longest)
             else:
                 listofsyn.append(word[0])

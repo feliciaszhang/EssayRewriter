@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import nltk
-nltk.download('all')
 from nltk.tokenize import word_tokenize
 from nltk.corpus import wordnet
 
@@ -10,6 +9,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['POST', 'GET'])
 def hello():
+    nltk.download('all')
     if request.method == 'POST':
         text = request.form.get("text")
         listofwords = word_tokenize(text)
